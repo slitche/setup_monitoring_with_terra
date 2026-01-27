@@ -1,0 +1,6 @@
+.terraform/
+monitoring_keypair.pem
+other_files/
+private_variables.tf
+terraform.*
+.terraform*

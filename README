@@ -1,0 +1,30 @@
+#=============================================================
+#  Node Setup Script for Monitoring Lecture Environment
+#-------------------------------------------------------------
+#  This script installs and configures:
+#   1. Basic System Setup
+#   2. Node Exporter (for Prometheus)
+#   3. Titan App as a Service
+#   4. Load generation scripts
+#   5. Alloy (for metrics & logs collection)
+#   6. Final Summary
+#
+#  Author: Ran, derived from a project from HKH
+#  Version: 2.0
+#  Tested on: AWS Ubuntu image
+#=============================================================
+
+
+# - This project is for monitoring a sample application server.
+# - It sets up Prometheus Node Exporter for metrics collection
+# and configures a mock application (Titan App) to simulate load.
+
+# - It also installs Grafana Alloy for metrics and log collection.
+# - Prometheus for metrics scraping, Loki for logs, and Grafana for visualization.
+# - Alloy was used to upload logs to Loki.
+    
+# I made the setup using Terraform X AWS to provision the infrastructure.
+# provisioned infrastructure includes:
+# - EC2 as Servers
+# - Security Groups for firewall rules
+# - Route53 for DNS management
