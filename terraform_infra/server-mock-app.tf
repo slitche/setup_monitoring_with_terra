@@ -120,7 +120,7 @@ resource "null_resource" "copy_and_run" {
   # setup monitoring
   # Upload the script..
   provisioner "file" {
-    source      = "./setup_scripts/monitor_app_server-setup.sh"
+    source      = "../setup_scripts/monitor_app_server-setup.sh"
     destination = "/tmp/test_app_server/monitor_app_server-setup.sh"
   }
 
