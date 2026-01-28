@@ -27,3 +27,13 @@ variable "ssh_private_key" {
   description = "SSH private key for EC2 instance access. defined in GitHub Secrets"
   type        = string
 }
+
+variable "tf_state_file" {
+  description = "Terraform state file key"
+  type        = string
+}
+
+variable "tf_s3_bucket" {
+  description = "Terraform state file key"
+  type        = string
+}

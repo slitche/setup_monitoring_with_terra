@@ -1,13 +1,13 @@
 terraform {
   required_version = ">= 1.6.0"
 
-  #   backend "s3" {
-  #     bucket         = "my-terraform-state-bucket"
-  #     key            = "ec2-instance/terraform.tfstate"
-  #     region         = "us-east-1"
-  #     dynamodb_table = "terraform-locks"
-  #     encrypt        = true
-  #   }
+    backend "s3" {
+      bucket         = vars.tf_s3_bucket
+      key            = vars.tf_state_key
+      region         = vars.region
+      # dynamodb_table = "terraform-locks"
+      # encrypt        = true
+    }
 
   required_providers {
     aws = {
