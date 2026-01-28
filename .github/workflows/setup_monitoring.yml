@@ -15,7 +15,7 @@ on:
 
 
 jobs:
-  Terraform_Ops:
+  Build_Infra:
     runs-on: ubuntu-latest
     env:
     # TF_VAR is the prefix used to set Terraform variables via environment variables
