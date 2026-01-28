@@ -2,11 +2,11 @@ terraform {
   required_version = ">= 1.6.0"
 
     backend "s3" {
-      bucket         = vars.tf_s3_bucket
-      key            = vars.tf_state_key
-      region         = vars.region
-      # dynamodb_table = "terraform-locks"
-      # encrypt        = true
+      # bucket         = var.tf_s3_bucket
+      # key            = var.tf_state_key
+      # region         = var.region
+      # # dynamodb_table = "terraform-locks"
+      # # encrypt        = true
     }
 
   required_providers {
