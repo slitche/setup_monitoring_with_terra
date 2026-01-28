@@ -28,3 +28,6 @@
 # - EC2 as Servers
 # - Security Groups for firewall rules
 # - Route53 for DNS management
+
+
+# Note: If ran in github actions, update the security group ingress rules to your actual IP.
