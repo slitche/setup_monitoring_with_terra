@@ -82,10 +82,10 @@ resource "aws_security_group" "app-sg" {
 # EC2 Instance
 resource "aws_instance" "app-server" {
   ami                    = var.ami
-  instance_type          = var.instance-type
+  instance_type          = var.instance_type
   key_name               = "monitoring_keypair" # Ensure this key pair exists in your AWS account
   vpc_security_group_ids = [aws_security_group.app-sg.id]
-  user_data              = file("./setup_scripts/test_app_server/mock_app-setup.sh")
+  user_data              = file("../setup_scripts/test_app_server/mock_app-setup.sh")
 
   tags = {
     Name = "app-Server"
@@ -112,7 +112,7 @@ resource "null_resource" "copy_and_run" {
 
   # Upload the script.. manually run the script after the terraform run because we have problems with the interactive parts
   provisioner "file" {
-    source      = "./setup_scripts/test_app_server"
+    source      = "../setup_scripts/test_app_server"
     destination = "/tmp/test_app_server"
   }
 

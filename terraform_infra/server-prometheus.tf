@@ -40,10 +40,10 @@ resource "aws_security_group" "prometheus-sg" {
 # EC2 Instance
 resource "aws_instance" "prometheus-server" {
   ami                    = var.ami
-  instance_type          = var.instance-type
+  instance_type          = var.instance_type
   key_name               = "monitoring_keypair" # Ensure this key pair exists in your AWS account
   vpc_security_group_ids = [aws_security_group.prometheus-sg.id]
-  user_data              = file("./setup_scripts/prometheus-setup.sh")
+  user_data              = file("../setup_scripts/prometheus-setup.sh")
   tags = {
     Name = "Prometheus-Server"
   }
