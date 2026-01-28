@@ -63,7 +63,7 @@ resource "aws_security_group" "app-sg" {
   }
 
   ingress {
-    description = "Alloy|Loki Web UI"
+    description = "Alloy-Loki Web UI"
     from_port   = 12345
     to_port     = 12345
     protocol    = "tcp"

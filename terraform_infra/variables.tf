@@ -7,7 +7,7 @@ variable "region" {
 }
 
 variable "ami" {
-  description = "AMI | us-east-1 UBUNTU"
+  description = "AMI - us-east-1 UBUNTU"
   type        = string
   # default     = "ami-0ecb62995f68bb549"
 }

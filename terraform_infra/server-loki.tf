@@ -13,7 +13,7 @@ resource "aws_security_group" "loki-sg" {
 
 
   ingress {
-    description     = "Connection to Loki from grafana server|view logs"
+    description     = "Connection to Loki from grafana server - view logs"
     from_port       = 3100
     to_port         = 3100
     protocol        = "tcp"
@@ -21,7 +21,7 @@ resource "aws_security_group" "loki-sg" {
   }
 
   ingress {
-    description     = "Connection to Loki from app server|upload logs"
+    description     = "Connection to Loki from app server - upload logs"
     from_port       = 3100
     to_port         = 3100
     protocol        = "tcp"
