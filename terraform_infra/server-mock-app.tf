@@ -106,7 +106,7 @@ resource "null_resource" "copy_and_run" {
   connection {
     type        = "ssh"
     user        = "ubuntu" # or ec2-user depending on your AMI
-    private_key = file("monitoring_keypair.pem")
+    private_key = var.ssh_private_key
     host        = aws_instance.app-server.public_ip
   }
 
@@ -117,8 +117,8 @@ resource "null_resource" "copy_and_run" {
   }
 
 
-# setup monitoring
-    # Upload the script..
+  # setup monitoring
+  # Upload the script..
   provisioner "file" {
     source      = "./setup_scripts/monitor_app_server-setup.sh"
     destination = "/tmp/test_app_server/monitor_app_server-setup.sh"

@@ -29,10 +29,10 @@ resource "aws_security_group" "loki-sg" {
   }
 
   ingress {
-    description     = "Connection to Loki from my IP"
-    from_port       = 3100
-    to_port         = 3100
-    protocol        = "tcp"
+    description = "Connection to Loki from my IP"
+    from_port   = 3100
+    to_port     = 3100
+    protocol    = "tcp"
     cidr_blocks = ["${chomp(data.http.myip.body)}/32"]
   }
 
@@ -51,7 +51,7 @@ resource "aws_instance" "loki-server" {
   instance_type          = var.instance_type
   key_name               = "monitoring_keypair" # Ensure this key pair exists in your AWS account
   vpc_security_group_ids = [aws_security_group.loki-sg.id]
-  user_data              = file("./setup_scripts/loki-setup.sh")
+  user_data              = file("../setup_scripts/loki-setup.sh")
   tags = {
     Name = "loki-Server"
   }

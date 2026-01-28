@@ -1,6 +1,5 @@
-.terraform/
+
 monitoring_keypair.pem
 other_files/
-
-terraform.*
-.terraform*
+terraform_infra/.terraform/
+terraform_infra/.terraform*

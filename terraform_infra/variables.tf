@@ -22,3 +22,8 @@ variable "vpc_id" {
   description = "VPC ID where resources will be deployed"
   type        = string
 }
+
+variable "ssh_private_key" {
+  description = "SSH private key for EC2 instance access. defined in GitHub Secrets"
+  type        = string
+}
