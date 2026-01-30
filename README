@@ -1,13 +1,13 @@
 #=============================================================
-#  Node Setup Script for Monitoring Lecture Environment
+#  Node Setup Script for Monitoring Environment
 #-------------------------------------------------------------
 #  This script installs and configures:
 #   1. Basic System Setup
 #   2. Node Exporter (for Prometheus)
-#   3. Titan App as a Service
-#   4. Load generation scripts
+#   3. Simple website App as a Service
+#   4. Load generation scripts | Testing
 #   5. Alloy (for metrics & logs collection)
-#   6. Final Summary
+#   
 #
 #  Author: Ran, derived from a project from HKH
 #  Version: 2.0
